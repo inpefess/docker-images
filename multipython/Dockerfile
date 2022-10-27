@@ -1,7 +1,6 @@
-FROM cimg/python:3.9.13
-USER root
-RUN apt-get update && apt-get install -y libopenblas-dev
-USER circleci
-RUN pyenv install 3.7.13
-RUN pyenv install 3.8.13
-RUN pyenv install 3.10.4
+FROM cimg/python:3.10.7
+RUN cd /home/circleci/.pyenv/plugins/python-build/../.. && git pull && cd -
+RUN pyenv install 3.7.15
+RUN pyenv install 3.8.15
+RUN pyenv install 3.9.15
+RUN pyenv install 3.11.0
