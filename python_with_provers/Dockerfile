@@ -1,4 +1,4 @@
-FROM inpefess/multipython:latest
+FROM inpefess/multipython:3.13
 # Vampire
 RUN wget https://github.com/vprover/vampire/releases/download/v4.8casc2023/vampire_z3_rel_static_casc2023_6749.zip -O vampire.zip
 RUN unzip vampire.zip
