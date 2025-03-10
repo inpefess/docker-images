@@ -6,9 +6,6 @@ RUN rm vampire.zip
 RUN mv bin/vampire_z3_rel_static_casc2023_6749 ${HOME}/.local/bin/vampire
 RUN rmdir ./bin
 RUN chmod u+x ${HOME}/.local/bin/vampire
-# Experimental Vampire
-RUN wget https://github.com/inpefess/vampire/releases/download/vampair/vampair -O ${HOME}/.local/bin/vampair
-RUN chmod u+x ${HOME}/.local/bin/vampair
 # iProver
 RUN wget https://gitlab.com/api/v4/projects/39846772/jobs/artifacts/2023.07.13/download?job=build-job -O iprover.zip
 RUN unzip iprover.zip
