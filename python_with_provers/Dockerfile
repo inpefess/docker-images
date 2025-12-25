@@ -1,6 +1,8 @@
 FROM inpefess/multipython:3.14
 # Vampire
-RUN wget https://github.com/vprover/vampire/releases/download/v4.9casc2024/vampire
+RUN wget https://github.com/vprover/vampire/releases/download/v5.0.0/vampire-Linux-X64.zip -O vampire.zip
+RUN unzip vampire.zip
+RUN rm vampire.zip
 RUN mv vampire ${HOME}/.local/bin
 RUN chmod u+x ${HOME}/.local/bin/vampire
 # iProver
